@@ -22,7 +22,7 @@
                <option value="alert-warning">Alerta</option>
                <option value="alert-danger">Erro</option>
             </select><br>
-        </div>
+        
             <div class="alert {{classe.value}}" >
                Cor da classe escolhida
             </div>
@@ -43,6 +43,14 @@
             Erro
         </div>
 
+        <div class="alert alert-danger" role="alert"
+            [style.display]="classe.value== 'alert-danger' ? 'block' : 'none'">
+            Parace so com erro
+        </div>
+
+    </div>
+   
+    
         
     </article>
    <!--
