@@ -1,5 +1,5 @@
 <section class="property-binding">
-    <article>
+  <!--  <article>
         <h3>Interpolation</h3>
         <p>Usando interpolação: {{ url }}</p>
         <p>Interpolação 1+1= {{ 1 + 1 }}</p>
@@ -8,11 +8,44 @@
     </article>
     <article>
         <h3>property Binding</h3>
-        <img src="{{urlImagem}}"/>
-        <img [src]="urlImagem"/>
-        <img bind-src="urlImagem"/>
+        <img src="{{urlImagem}}"/><br/>
+        <img [src]="urlImagem"/><br/>
+        <img bind-src="urlImagem"/><br/>
+    </article> -->
+    <article>
+        <h3>Class e Style Binding</h3>
+        <div >
+            Selecione uma classe:
+            <select #classe (change)="0" >
+               <option value="alert-success">Sucesso</option>
+               <option value="alert-info">Info</option>
+               <option value="alert-warning">Alerta</option>
+               <option value="alert-danger">Erro</option>
+            </select>
+        </div>
+            
+            <div class="alert" role="alert"
+            [class.alert-success]="classe.value == 'alert-success'">
+            Sucesso
+        </div>
+            <div class="alert" role="alert"
+            [class.alert-info]="classe.value=='alert-info'">
+            Info
+        </div>
+            <div class="alert" role="alert"
+            [class.alert-warning]="classe.value=='alert-warning'">
+            Alerta
+        </div>
+            <div class="alert" role="alert"
+            [class.alert-danger]="classe.value=='alert-danger'">
+            Erro
+        </div>
+
+        
     </article>
+   <!--
     <app-data-numeros>
         
     </app-data-numeros>
+    -->
 </section>
