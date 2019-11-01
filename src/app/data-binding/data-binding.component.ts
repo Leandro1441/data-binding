@@ -1,6 +1,8 @@
 
 import { Component, OnInit } from '@angular/core';
+
 import { DataLinkService } from './data-link.service';
+
 
 @Component({
   selector: 'app-data-binding',
@@ -14,7 +16,14 @@ export class DataBindingComponent implements OnInit {
   cursoAngular:boolean= true;
   valorAtual='';
   valorSalvo;
+  nome:string ="abc";
   mouse:boolean=false;
+  
+  pessoa: any ={
+    nome:'def',
+    idade:20
+  }
+  
   getValor(){
     return 1;
   }

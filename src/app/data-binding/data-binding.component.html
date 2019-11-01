@@ -49,6 +49,7 @@
     </div>
     </article>
 -->
+<!--
     <article>
         <h3> Event Binding</h3>
         <div>
@@ -74,11 +75,36 @@
 
         </div>
     </article>
-     
+     -->
+     <article>
+         <div>
+            <input type="text" 
+            [value]="nome"
+            (input)="nome = $event.target.value"
+            />
+            <input type="text" 
+            [ngModel]="nome"
+            (ngModelChange)="nome = $event"
+            />
+            <input type="text" 
+            [(ngModel)]="nome"         
+            />
+            <p>Você digitou: {{nome}}</p>
+            <br>
+            <p>Dados Pessoais</p>
+
+            <p>Nome: <input type="text" [(ngModel)]="pessoa.nome"/></p>
+
+            <p>Idade: <input type="text" [(ngModel)]="pessoa.idade"/></p>
+            <p>Seu nome: {{pessoa.nome}}<br>
+            Sua idade: {{pessoa.idade}}</p>
+         </div>
+     </article>
 
 
 
-    
+
+
    <!--
     <app-data-numeros>
         
