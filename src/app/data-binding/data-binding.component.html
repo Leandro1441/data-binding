@@ -12,7 +12,7 @@
         <img [src]="urlImagem"/><br/>
         <img bind-src="urlImagem"/><br/>
     </article> -->
-    <article>
+    <!-- <article>
         <h3>Class e Style Binding</h3>
         <div >
             Selecione uma classe:
@@ -42,17 +42,43 @@
             [class.alert-danger]="classe.value=='alert-danger'">
             Erro
         </div>
-
         <div class="alert alert-danger" role="alert"
             [style.display]="classe.value== 'alert-danger' ? 'block' : 'none'">
             Parace so com erro
         </div>
-
     </div>
-   
-    
-        
     </article>
+-->
+    <article>
+        <h3> Event Binding</h3>
+        <div>
+            <button (click)="botaoClicado()"
+            class="btn btn-primary">Me clique!</button>
+            <br><br>
+
+            <input type="text" 
+            (keyup)="onKeyUp($event)"
+            (keyup.enter)="salvarValor($event.target.value)"
+            (blur)="salvarValor(campoInput.value)"
+            #campoInput
+            />
+            <p>valor atual: {{valorAtual}}</p>
+            <p>valor salvo: {{valorSalvo}}</p>
+            <br>
+            <span
+               (mouseover)="onMouseOverOut()" 
+               (mouseout)="onMouseOverOut()" 
+               [class.highlight]="mouse">
+            Passe o mouse aqui
+            </span>
+
+        </div>
+    </article>
+     
+
+
+
+    
    <!--
     <app-data-numeros>
         

@@ -12,7 +12,9 @@ export class DataBindingComponent implements OnInit {
   url;
   urlImagem;
   cursoAngular:boolean= true;
-
+  valorAtual='';
+  valorSalvo;
+  mouse:boolean=false;
   getValor(){
     return 1;
   }
@@ -22,9 +24,22 @@ export class DataBindingComponent implements OnInit {
     else
     return "não curtindo"
   }
+  botaoClicado(){
+    alert("Botao clicado")
+  }
+  onKeyUp(evento:KeyboardEvent){
+    this.valorAtual=(<HTMLInputElement>evento.target).value;
+    
+  }
   constructor(DataLinkService:DataLinkService) { 
     this.urlImagem=DataLinkService.getLinkImagem();
     this.url=DataLinkService.getLink();
+  }
+  salvarValor(valor){
+    this.valorSalvo=valor;
+  }
+  onMouseOverOut(){
+    this.mouse=!this.mouse;
   }
 
   ngOnInit() {
