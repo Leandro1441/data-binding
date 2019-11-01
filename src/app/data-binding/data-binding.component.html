@@ -21,9 +21,11 @@
                <option value="alert-info">Info</option>
                <option value="alert-warning">Alerta</option>
                <option value="alert-danger">Erro</option>
-            </select>
+            </select><br>
         </div>
-            
+            <div class="alert {{classe.value}}" >
+               Cor da classe escolhida
+            </div>
             <div class="alert" role="alert"
             [class.alert-success]="classe.value == 'alert-success'">
             Sucesso
