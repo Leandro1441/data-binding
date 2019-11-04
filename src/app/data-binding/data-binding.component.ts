@@ -20,6 +20,7 @@ export class DataBindingComponent implements OnInit {
   mouse:boolean=false;
 
   nomeDoCurso: string ='Angular';
+  valorIncial=10;
   
   pessoa: any ={
     nome:'def',
@@ -51,6 +52,9 @@ export class DataBindingComponent implements OnInit {
   }
   onMouseOverOut(){
     this.mouse=!this.mouse;
+  }
+  onMudouValor(evento){
+    console.log(evento.novoValor);
   }
 
   ngOnInit() {
