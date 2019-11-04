@@ -4,14 +4,14 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { DataNumerosComponent } from './data-binding/data-numeros/data-numeros.component';
+import { InputPropertyComponent } from './input-property/input-property.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DataBindingComponent,
-    DataNumerosComponent
+    InputPropertyComponent
   ],
   imports: [
     BrowserModule,

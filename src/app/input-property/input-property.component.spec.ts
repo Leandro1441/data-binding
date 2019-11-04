@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DataNumerosComponent } from './data-numeros.component';
+import { InputPropertyComponent } from './input-property.component';
 
-describe('DataNumerosComponent', () => {
-  let component: DataNumerosComponent;
-  let fixture: ComponentFixture<DataNumerosComponent>;
+describe('InputPropertyComponent', () => {
+  let component: InputPropertyComponent;
+  let fixture: ComponentFixture<InputPropertyComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DataNumerosComponent ]
+      declarations: [ InputPropertyComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DataNumerosComponent);
+    fixture = TestBed.createComponent(InputPropertyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
